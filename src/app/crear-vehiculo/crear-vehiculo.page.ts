@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,7 +12,7 @@ export class CrearVehiculoPage implements OnInit {
 
   formularioCrearVehiculo:FormGroup;
 
-  constructor(private fb:FormBuilder) { 
+  constructor(private fb:FormBuilder, private router:Router) { 
     this.formularioCrearVehiculo = this.fb.group(
       {
         modelo: [''],
@@ -30,7 +31,7 @@ export class CrearVehiculoPage implements OnInit {
     const vehiculo = {
       modelo: this.formularioCrearVehiculo.get('modelo')?.value,
       patente:this.formularioCrearVehiculo.get('patente')?.value,
-      annio:this.formularioCrearVehiculo.get('año')?.value
+      annio:this.formularioCrearVehiculo.get('annio')?.value
     }
     if(vehiculo.annio >= 1900){
       console.log(vehiculo)
@@ -38,5 +39,8 @@ export class CrearVehiculoPage implements OnInit {
     }
     
     console.log(vehiculo)
+  }
+  volverlista(){
+    this.router.navigate(['/listar-autos'])
   }
 }

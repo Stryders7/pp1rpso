@@ -5,22 +5,18 @@
 
 <ion-content [fullscreen]="true">
   <form [formGroup] = 'formularioCrearVehiculo'>
-    <ion-input formControlName="Modelo"  label="Ingrese nombre" label-placement="floating" fill="solid" placeholder="Enter text"></ion-input>
+    <ion-input formControlName="modelo"  label="Ingrese modelo" label-placement="floating" fill="solid" placeholder="Enter text"></ion-input>
     <br />
 
-    <ion-input formControlName="patente" label="Ingrese edad" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
+    <ion-input formControlName="patente" label="Ingrese patente" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
     <br />
 
-    <ion-input formControlName="Año" label="Ingrese cargo" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
+    <ion-input formControlName="annio" label="Ingrese año del vehiculo" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
 
-    <ion-button (click)="grabarVehiculo()">grabarVehiculo</ion-button>
+    <ion-button (click)="grabarVehiculo()">GrabarVehiculo</ion-button>
+    <ion-button (click)="volverlista()">Volver</ion-button>
   </form>
   
 </ion-content>
 
 </ion-header>
-<ion-footer>
-  <ion-toolbar>
-    <ion-title>Footer</ion-title>
-  </ion-toolbar>
-</ion-footer>
