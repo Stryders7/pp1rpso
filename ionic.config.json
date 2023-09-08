@@ -1,0 +1,7 @@
+{
+  "name": "preparacionpp1",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
